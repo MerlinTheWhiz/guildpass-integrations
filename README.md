@@ -2,7 +2,6 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](./LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-green?style=flat-square)](https://nodejs.org)
-[![GrantFox](https://img.shields.io/badge/GrantFox-open%20for%20contributions-orange?style=flat-square)](https://contribute.grantfox.xyz)
 
 The main frontend MVP for the GuildPass ecosystem. Built with **Next.js 14 App Router**, TypeScript, Tailwind CSS, wagmi/viem, and React Query, this app provides the member and admin dashboards for the GuildPass token-gated community platform.
 
@@ -62,7 +61,7 @@ npm run dev
 ## Environment Variables
 
 | Variable | Required | Description |
-|---|---|---|
+| ---- | ------- | ----------- |
 | `NEXT_PUBLIC_MOCK_MODE` | No | Set `true` to use in-memory mock API (no backend needed) |
 | `NEXT_PUBLIC_DEMO_MODE` | No | Alias for `NEXT_PUBLIC_MOCK_MODE` |
 | `NEXT_PUBLIC_CORE_API_URL` | Live mode only | Base URL of the `guildpass-core` access-api |
@@ -86,7 +85,7 @@ npm run typecheck  # TypeScript type checking
 ## Architecture
 
 | Path | Purpose |
-|---|---|
+| ---- | ------- |
 | `app/*` | Next.js App Router pages |
 | `lib/wallet/providers.tsx` | wagmi and React Query global providers |
 | `lib/api/*` | API layer (`getApi(address?)` switches mock ↔ live) |
@@ -123,23 +122,20 @@ npm run typecheck  # TypeScript type checking
 
 ---
 
-## 🦊 Contributing via GrantFox
+## Contributing
 
-This repository is listed on **[GrantFox](https://contribute.grantfox.xyz)** for open contributions.
+We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guide.
 
 ### How to contribute
 
 1. Browse open issues tagged [`good first issue`](https://github.com/Adamantine-Guild/guildpass-integrations/issues?q=label%3A%22good+first+issue%22) or [`help wanted`](https://github.com/Adamantine-Guild/guildpass-integrations/issues?q=label%3A%22help+wanted%22).
-2. Apply for an issue on [GrantFox](https://contribute.grantfox.xyz) or comment on the GitHub issue.
+2. Comment directly on the GitHub issue you'd like to work on.
 3. Fork the repo, create a feature branch, implement your change, open a PR.
-4. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full contribution guide.
 
-### Maintainer resources
+### Maintainer contact
 
-- [Maintainer app](https://maintainer.grantfox.xyz)
-- [GrantFox docs](https://docs.grantfox.xyz)
 - Contact: maintainers@guildpass.xyz
 
-## 📄 License
+## License
 
 MIT — see [LICENSE](./LICENSE).

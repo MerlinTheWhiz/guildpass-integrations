@@ -1,12 +1,12 @@
 # Contributing to GuildPass Frontend
 
-Thank you for your interest in contributing to the GuildPass Frontend! This repository is listed on [GrantFox](https://contribute.grantfox.xyz) for open contributions.
+Thank you for your interest in contributing to the GuildPass Frontend!
 
 ## Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
 - [Ways to Contribute](#ways-to-contribute)
-- [Finding Issues via GrantFox](#finding-issues-via-grantfox)
+- [Finding Issues](#finding-issues)
 - [Development Setup](#development-setup)
 - [Branching & Commits](#branching--commits)
 - [Submitting a Pull Request](#submitting-a-pull-request)
@@ -34,16 +34,13 @@ By participating you agree to our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
 ---
 
-## Finding Issues via GrantFox
+## Finding Issues
 
-1. Visit the [GrantFox contributor app](https://contribute.grantfox.xyz) and find the **Adamantine-Guild / guildpass-integrations** project.
-2. Browse issues tagged `good first issue` or `help wanted`.
-3. Apply for an issue on GrantFox, or comment `I'd like to work on this` on the GitHub issue.
-4. Wait for a maintainer to assign it before starting.
-
-Direct GitHub filters:
-- [`good first issue`](https://github.com/Adamantine-Guild/guildpass-integrations/issues?q=label%3A%22good+first+issue%22)
-- [`help wanted`](https://github.com/Adamantine-Guild/guildpass-integrations/issues?q=label%3A%22help+wanted%22)
+1. Browse issues directly on GitHub:
+   - [`good first issue`](https://github.com/Adamantine-Guild/guildpass-integrations/issues?q=label%3A%22good+first+issue%22)
+   - [`help wanted`](https://github.com/Adamantine-Guild/guildpass-integrations/issues?q=label%3A%22help+wanted%22)
+2. Comment `I'd like to work on this` on the GitHub issue you'd like to work on.
+3. Wait for a maintainer to assign it before starting.
 
 ---
 
@@ -77,7 +74,7 @@ NEXT_PUBLIC_MOCK_MODE=true npm run dev
 ### Architecture overview
 
 | Path | Purpose |
-|---|---|
+| ---- | ------- |
 | `app/*` | Next.js App Router pages |
 | `lib/api/*` | API layer (mock ↔ live switch) |
 | `components/ui/*` | Shadcn-style UI primitives |
@@ -133,4 +130,3 @@ npm run lint        # Fix all reported issues
 
 - GitHub Issues: preferred for task discussion and bug reports
 - Contact: maintainers@guildpass.xyz
-- [GrantFox maintainer app](https://maintainer.grantfox.xyz)

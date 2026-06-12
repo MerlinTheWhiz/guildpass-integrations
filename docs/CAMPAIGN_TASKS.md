@@ -1,6 +1,6 @@
-# GrantFox Campaign Tasks — GuildPass Frontend
+# GuildPass Frontend Tasks
 
-This document lists tasks suitable for **GrantFox campaign contributions**.
+This document lists tasks suitable for open contributions.
 
 ---
 
@@ -85,4 +85,4 @@ This document lists tasks suitable for **GrantFox campaign contributions**.
 
 ---
 
-*To apply for a task, visit [GrantFox](https://contribute.grantfox.xyz) or comment on the linked GitHub issue.*
+*To work on a task, comment on the linked GitHub issue.*

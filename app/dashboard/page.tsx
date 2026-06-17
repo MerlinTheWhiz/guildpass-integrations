@@ -1,12 +1,12 @@
-"use client"
-import { useAccount } from "wagmi"
-import { useQuery } from "@tanstack/react-query"
-import { getApi, type Membership, type Session } from "@/lib/api"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { LoadingState, ErrorState, safeErrorMessage } from "@/components/ui/api-states"
+'use client'
+import { useAccount } from 'wagmi'
+import { useQuery } from '@tanstack/react-query'
+import { getApi, type Membership, type Session } from '@/lib/api'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+import { buttonVariants } from '@/components/ui/button'
+import { LoadingState, ErrorState, safeErrorMessage } from '@/components/ui/api-states'
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -92,8 +92,8 @@ export default function DashboardPage() {
           <div className="space-y-2">
             <div className="text-sm">Explore resources based on your tier.</div>
             <div className="flex items-center gap-2">
-              <Button asChild><Link href="/resources/alpha">Alpha Docs</Link></Button>
-              <Button variant="outline" asChild><Link href="/events/demo">Demo Event</Link></Button>
+              <Link href="/resources/alpha" className={buttonVariants()}>Alpha Docs</Link>
+              <Link href="/events/demo" className={buttonVariants({ variant: 'outline' })}>Demo Event</Link>
             </div>
           </div>
         </Section>

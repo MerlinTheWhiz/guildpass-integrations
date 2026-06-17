@@ -7,6 +7,7 @@ import { useAccount } from 'wagmi'
 import { cn } from '@/lib/utils'
 import { ConnectButton } from './wallet/connect-button'
 import { useSiweAuth } from '@/lib/wallet/providers'
+import { features } from '@/lib/features'
 
 export function Nav() {
   const pathname = usePathname()
@@ -23,11 +24,11 @@ export function Nav() {
 
   const isAdmin = !!session?.roles?.includes('admin')
   const items = [
-    { href: '/dashboard', label: 'Dashboard' },
-    ...(isAdmin ? [{ href: '/admin', label: 'Admin' }] : []),
-    { href: '/resources/alpha', label: 'Gated' },
-    { href: '/events/demo', label: 'Event' },
-  ]
+    { href: '/dashboard', label: 'Dashboard', enabled: true },
+    { href: '/admin', label: 'Admin', enabled: isAdmin },
+    { href: '/resources/alpha', label: 'Gated', enabled: features.resources },
+    { href: '/events/demo', label: 'Event', enabled: features.events },
+  ].filter((it) => it.enabled)
 
   return (
     <div className="border-b">

@@ -19,6 +19,9 @@ import {
 } from './types'
 import { ApiError } from './errors'
 
+/** Alias for ApiError — re-exported so admin pages can import AuthError from this module. */
+export { ApiError as AuthError } from './errors'
+
 import { PolicyValidationError, validatePolicy } from '@/lib/validation/policy'
 import { config } from '@/lib/config'
 

@@ -136,6 +136,15 @@ export class MockAccessApi implements AccessApi {
   // ── Read-only ──────────────────────────────────────────────────────────────
 
   async getSession(): Promise<Session> {
+    const MOCK_SESSION_STATE = process.env.NEXT_PUBLIC_MOCK_SESSION_STATE || 'valid'
+    if (MOCK_SESSION_STATE === 'cleared') {
+      return {
+        // No authenticated session
+        roles: [],
+        community,
+      }
+    }
+
     const data = ensureAddress(this.address)
     return {
       address: this.address,
@@ -242,4 +251,13 @@ export class MockAccessApi implements AccessApi {
   async siweLogout(_token: string): Promise<void> {
     // No server-side session to invalidate in mock mode
   }
+
+  async verifyWallet(address: string): Promise<WalletVerification> {
+    return {
+      verified: true,
+      method: 'mock',
+      checkedAt: new Date().toISOString(),
+    }
+  }
+}
 }
